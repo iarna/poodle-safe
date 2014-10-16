@@ -17,10 +17,6 @@ if [ -f "$POODLED" ]; then
 	exit 1
 fi
 
-echo "There are some issues with this strategy and tools like 1password that try"
-echo "to do app bundle verification. Check back in this space for an update soon, I hope."
-exit 1
-
 mv "$EXEC" "$POODLED"
 
 poodle
@@ -29,3 +25,7 @@ chmod a+rx "$EXEC"
 
 echo "Your Chrome is now poodle safe. Please quit and relaunch it."
 echo "You'll need to approve Google Chrome Poodled for keychain access."
+echo "If you're using 1Password, it will refuse to run as long as you"
+echo "have signature verification turned on, see:"
+echo
+echo "https://guides.agilebits.com/kb/1password4/en/topic/browser-code-signature-validation?process_bundle_id=com.google.Chrome"

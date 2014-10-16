@@ -21,6 +21,10 @@ if [ -f "$POODLED" ]; then
 	exit 1
 fi
 
+echo "There are some issues with this strategy and tools like 1password that try"
+echo "to do app bundle verification. Check back in this space for an update soon, I hope."
+exit 1
+
 mv "$EXEC" "$POODLED"
 
 poodle

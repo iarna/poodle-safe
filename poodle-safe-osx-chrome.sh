@@ -12,12 +12,8 @@ EOF
 }
 
 if [ -f "$POODLED" ]; then
-	if egrep -q 'poodle-safe-osx-chrome.sh|bash' "$EXEC"; then
-		echo "I made your chrome bad, sorry about that! =( Fixing it!"
-		poodle
-		exit 0
-	fi
-	echo "You already made your chrome poodle-safe" 1>&2
+	mv "$POODLED" "$EXEC"
+	echo "We've depoodle-safed you. You should be back to normal." 1>&2
 	exit 1
 fi
 

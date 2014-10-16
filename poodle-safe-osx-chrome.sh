@@ -13,7 +13,7 @@ mv "$EXEC" "$POODLED"
 
 cat << EOF > "$EXEC"
 #!/bin/sh
-exec "$0 Poodled" --ssl-version-min=tls1 "$@"
+exec "\$0 Poodled" --ssl-version-min=tls1 "\$@"
 EOF
 
 chmod a+rx "$EXEC"
